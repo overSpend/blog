@@ -1,26 +1,63 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from 'react';
+import { graphql } from 'gatsby';
 
-export default ({ data }) => {
-  const post = data.markdownRemark
-  return (
-    <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
-    </Layout>
-  )
+import Layout from '../components/layout';
+import { Container, Title, Header } from './post-styles';
+
+class BlogPostTemplate extends React.Component {
+    render() {
+        const post = this.props.data.markdownRemark;
+        const siteTitle = this.props.data.site.siteMetadata.title;
+
+        return (
+            <Layout location={this.props.location} title={siteTitle}>
+                <Container>
+                    <Header>
+                        <Title>{post.frontmatter.title}</Title>
+                        <sub
+                            css={`
+                          color: rgba(0,0,0,0.8);
+                              `}
+                        >
+                            <span>Posted on {post.frontmatter.date}</span>
+                            <span>&nbsp; - &nbsp;</span>
+                            <span>{post.fields.readingTime.text}</span>
+                        </sub>
+                    </Header>
+                    <div
+                        css={`
+                          margin: 5rem 0;
+                        `}
+                        dangerouslySetInnerHTML={{ __html: post.html }}
+                    />
+                </Container>
+            </Layout>
+        );
+    }
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-      }
+export default BlogPostTemplate;
+
+export const pageQuery = graphql`
+    query BlogPostBySlug($slug: String!) {
+        site {
+            siteMetadata {
+                title
+            }
+        }
+        markdownRemark(fields: { slug: { eq: $slug } }) {
+            id
+            excerpt
+            html
+            fields {
+                readingTime {
+                    text
+                }
+            }
+            frontmatter {
+                title
+                date(formatString: "MMMM DD, YYYY")
+            }
+        }
     }
-  }
-`
+`;

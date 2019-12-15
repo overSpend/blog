@@ -1,33 +1,26 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { css } from '@emotion/core';
-import { rhythm } from '../utils/typography';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import styled from 'styled-components';
+
+import Bio from '../components/bio';
+import Post from '../components/post';
+
+const Title = styled.h3`
+    font-weight: 800;
+    margin-top: 7vh;
+    color: rgba(0, 0, 0, 0.8);
+`;
 
 export default ({ data }) => {
+    const posts = data.allMarkdownRemark.edges;
     return (
         <Layout>
-            <div>
-                <h1 css={css`display: inline-block;`}>incomplete Blog!</h1>
-                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id}>
-                        <Link
-                            to={node.fields.slug}
-                            css={css`
-                                text-decoration: none;
-                                color: inherit;
-                            `}
-                        >
-                            <h3 css={css`margin-bottom: ${rhythm(1 / 4)};`}>
-                                {node.frontmatter.title}{' '}
-                                <span css={css`color: #bbb;`}>— {node.frontmatter.date}</span>
-                            </h3>
-                            <p>{node.excerpt}</p>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+            <Bio />
+            <Title>Latest Posts</Title>
+            {posts.map(({ node }) => {
+                return <Post key={node.id} node={node} />;
+            })}
         </Layout>
     );
 };
@@ -35,16 +28,18 @@ export default ({ data }) => {
 export const query = graphql`
     query {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-            totalCount
             edges {
                 node {
                     id
                     frontmatter {
                         title
-                        date(formatString: "DD MMMM, YYYY")
+                        date(formatString: "MMMM DD, YYYY")
                     }
                     fields {
                         slug
+                        readingTime {
+                            text
+                        }
                     }
                     excerpt
                 }

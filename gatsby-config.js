@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Overspend`,
+    title: `OVERSPEND`,
+    author: `과소비`,
+    authorTagline: `당신의 과소비를 위해` 
   },
   plugins: [
     {
@@ -10,13 +12,13 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
+      {
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-emotion`,
+    `gatsby-remark-reading-time`,
   ],
 }
