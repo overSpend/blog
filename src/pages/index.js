@@ -9,7 +9,7 @@ import Post from '../components/post';
 const Title = styled.h3`
     font-weight: 800;
     margin-top: 7vh;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
 `;
 
 export default ({ data }) => {

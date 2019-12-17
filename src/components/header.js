@@ -9,7 +9,8 @@ const Container = styled.header`
 
 const Title = styled.h1`
     display: inline;
-    color: rgb(29, 29, 29, 0.95);
+
+    color: rgba(0, 0, 0, 1);
     letter-spacing: 0.1rem;
 `;
 

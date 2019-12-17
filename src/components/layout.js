@@ -87,7 +87,6 @@ class Layout extends Component {
                         <Header title={data.site.siteMetadata.title}>
                             <ListLink to="/">Home</ListLink>
                             <ListLink to="/about/">About</ListLink>
-                            <ListLink to="/contact/">Contact</ListLink>
                         </Header>
                         <Content>{children}</Content>
                         <Footer />
