@@ -96,9 +96,9 @@ export default () => (
                         <strong css={css`font-size: 1.1rem;`}>개인 블로그&nbsp;</strong>
                         <TextBox css={css`margin-bottom: 0.3rem;`}>
                             <strong>Page Link:&nbsp;</strong>
-                            <Link to="https://overspend.netlify.com">
+                            <ListLink to="/">
                                 overspend.netlify.com
-                            </Link>
+                            </ListLink>
                         </TextBox>
                         개인 블로그를 운영해보고 싶어 제작했습니다. 공부를 하며 제가 배운 내용이나 경험하게된 내용을 공유하는 블로그입니다. 블로그는
                         Gatsby.js와 Netlify를 이용해 제작했습니다.
