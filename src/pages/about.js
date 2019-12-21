@@ -96,7 +96,7 @@ export default () => (
                         <strong css={css`font-size: 1.1rem;`}>개인 블로그&nbsp;</strong>
                         <TextBox css={css`margin-bottom: 0.3rem;`}>
                             <strong>Page Link:&nbsp;</strong>
-                            <ListLink to="/">
+                            <ListLink to="https://overspend.netlify.com">
                                 overspend.netlify.com
                             </ListLink>
                         </TextBox>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 import { Container, Title, Header } from './post-styles';
 
@@ -11,6 +12,7 @@ class BlogPostTemplate extends React.Component {
 
         return (
             <Layout location={this.props.location} title={siteTitle}>
+                <SEO title={post.frontmatter.title} description={post.excerpt} />
                 <Container>
                     <Header>
                         <Title>{post.frontmatter.title}</Title>
@@ -43,6 +45,7 @@ export const pageQuery = graphql`
         site {
             siteMetadata {
                 title
+                author
             }
         }
         markdownRemark(fields: { slug: { eq: $slug } }) {

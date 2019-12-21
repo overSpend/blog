@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import styled from 'styled-components';
 
+import SEO from '../components/seo';
 import Bio from '../components/bio';
 import Post from '../components/post';
 
@@ -16,6 +17,7 @@ export default ({ data }) => {
     const posts = data.allMarkdownRemark.edges;
     return (
         <Layout>
+            <SEO title="All Posts" keywords={[`gatsby`, `blog`, `react`]} />
             <Bio />
             <Title>Latest Posts</Title>
             {posts.map(({ node }) => {
