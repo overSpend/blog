@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import StyledLink from '../utils/styled-link';
 
-const Container = styled.div``;
+import StyledLink from '../utils/styled-link';
+import media from '../utils/media';
+
+const Container = styled.div`
+ ${media.phone`
+    margin: 0.5rem 0;
+    padding: 0.4rem 0;
+  `}
+`;
 
 const Title = styled.h4`
     margin-top: 3vh;

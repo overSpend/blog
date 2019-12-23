@@ -2,9 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
-const Container = styled.div`margin-top: 10vh;`;
+import media from '../utils/media';
 
-const TextContainer = styled.div``;
+const Container = styled.div`
+    margin-top: 10vh;
+
+    ${media.tablet`
+    flex-direction: column;
+    text-align: center;
+  `};
+`;
+
+const TextContainer = styled.div`
+${media.tablet`
+    flex-direction: column;
+    text-align: center;
+  `}
+`;
 
 const Name = styled.h3`
     display: block;

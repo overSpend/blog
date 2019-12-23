@@ -4,6 +4,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
+import media from '../utils/media';
+
 import Header from './header';
 
 const ListLink = props => (
@@ -60,6 +62,10 @@ const PostContainer = styled.div`
     margin: 3rem auto;
     max-width: 728px;
     padding: 0 0.5rem;
+
+    ${media.tablet`
+    width: 80%;
+  `};
 `;
 const Footer = styled.footer`
     display: block;

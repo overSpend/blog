@@ -6,11 +6,16 @@ import styled from 'styled-components';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import Post from '../components/post';
+import media from '../utils/media';
 
 const Title = styled.h3`
     font-weight: 800;
     margin-top: 7vh;
     color: rgba(0, 0, 0, 0.9);
+
+    ${media.phone`
+    margin: 3rem 0 0;
+  `};
 `;
 
 export default ({ data }) => {
