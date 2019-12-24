@@ -15,7 +15,7 @@ const Title = styled.h1`
 
     ${media.phone`
     text-align: center;
-    letter-spacing: none;
+    letter-spacing: 0;
   `};
 `;
 
