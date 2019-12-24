@@ -17,6 +17,18 @@ module.exports = {
             resolve: `gatsby-plugin-styled-components`,
             options: {}
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `OVERSPEND's Blog`,
+                short_name: `과소비의 블로그`,
+                start_url: `/`,
+                background_color: `#663399`,
+                theme_color: `#663399`,
+                display: `standalone`,
+            }
+        },
+        `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-remark`,
         `gatsby-plugin-emotion`,
