@@ -13,6 +13,10 @@ const Title = styled.h1`
     color: rgba(0, 0, 0, 1);
     letter-spacing: 0.1rem;
 
+    ${media.tablet`
+    text-align: center;
+    letter-spacing: 0;
+  `};
     ${media.phone`
     text-align: center;
     letter-spacing: 0;
