@@ -6,15 +6,14 @@ import StyledLink from '../utils/styled-link';
 import media from '../utils/media';
 
 const Container = styled.div`
- ${media.phone`
+    ${media.tablet`
+    margin: 0.5rem 0;
+    padding: 0.4rem 0;
+  `},
+    ${media.phone`
     margin: 0.5rem 0;
     padding: 0.4rem 0;
   `}
-`;
-
-const Title = styled.h4`
-    margin-top: 3vh;
-    color: rgba(0, 0, 0, 0.8);
 `;
 
 const Excerpt = styled.p`
@@ -23,7 +22,10 @@ const Excerpt = styled.p`
     color: rgb(29, 29, 29, 0.95);
 `;
 
-// sub css = components/layout.js
+const Title = styled.h4`
+    margin-top: 3vh;
+    color: rgba(0, 0, 0, 0.8);
+`;
 
 const Post = ({ node }) => (
     <StyledLink to={node.fields.slug}>
@@ -52,6 +54,5 @@ Post.propTypes = {
         excerpt: PropTypes.string.isRequired
     })
 };
-
 
 export default Post;

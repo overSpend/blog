@@ -15,12 +15,11 @@ const Title = styled.h1`
 
     ${media.tablet`
     text-align: center;
-    letter-spacing: 0;
-  `};
+    letter-spacing: 0;`};
+
     ${media.phone`
     text-align: center;
-    letter-spacing: 0;
-  `};
+    letter-spacing: 0;`};
 `;
 
 const Ul = styled.ul`

@@ -8,9 +8,9 @@ const Page = styled.div``;
 
 const Header = styled.header``;
 
-const TextBox = styled.p`margin-bottom: 1.1rem;`;
-
 const Box = styled.div`margin-bottom: 1.3rem;`;
+
+const TextBox = styled.p`margin-bottom: 1.1rem;`;
 
 const Container = styled.div`
     margin: 5rem auto;
@@ -18,17 +18,17 @@ const Container = styled.div`
     padding: 0 0.5rem;
 `;
 
+const Title = styled.h1`
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+`;
+
 const PageTitle = styled.h1`
     letter-spacing: 0.05rem;
     margin-bottom: 0.7rem;
     color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-`;
-
-const Title = styled.h1`
-    color: rgba(0, 0, 0, 0.9);
-    font-size: 1.8rem;
-    margin-bottom: 0.2rem;
 `;
 
 const SubTitle = styled.h2`
