@@ -46,7 +46,7 @@ const Footer = styled.footer`
 
 const PostContainer = styled.div`
     margin: 3rem auto;
-    max-width: 42rem;
+    max-width: 40rem;
     padding: 0 0.5rem;
 
     ${media.mobile`

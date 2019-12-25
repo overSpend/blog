@@ -13,13 +13,14 @@ const Container = styled.div`
 `;
 
 const Excerpt = styled.p`
+    margin-top: 1rem;
     font-weight: bolder;
-    margin: 1rem 0 4rem 0;
-    color: rgb(29, 29, 29, 0.95);
+    letter-spacing: -1px;
+    color: rgb(29, 29, 29, 0.87);
 `;
 
 const Title = styled.h4`
-    margin-top: 3vh;
+    margin-top: 2.34rem;
     color: rgba(0, 0, 0, 0.8);
 `;
 

@@ -15,10 +15,10 @@ const Container = styled.div`
 `;
 
 const TextContainer = styled.div`
-${media.mobile`
+    ${media.mobile`
     flex-direction: column;
     text-align: center;
-  `}
+  `};
 `;
 
 const Name = styled.h3`
@@ -50,14 +50,14 @@ const Bio = () => (
 );
 
 const bioQuery = graphql`
-    query {
-        site {
-            siteMetadata {
-                author
-                authorTagline
-            }
-        }
+  query BioQuery {
+    site {
+      siteMetadata {
+        author
+        authorTagline
+      }
     }
+  }
 `;
 
 export default Bio;
