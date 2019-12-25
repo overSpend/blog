@@ -13,7 +13,8 @@ const Title = styled.h3`
     margin-top: 7vh;
     color: rgba(0, 0, 0, 0.9);
 
-    ${media.phone`
+    ${media.mobile`
+    margin-top: 5vh;
     margin: 3rem 0 0;
   `};
 `;

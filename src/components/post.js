@@ -6,11 +6,7 @@ import StyledLink from '../utils/styled-link';
 import media from '../utils/media';
 
 const Container = styled.div`
-    ${media.tablet`
-    margin: 0.5rem 0;
-    padding: 0.4rem 0;
-  `},
-    ${media.phone`
+    ${media.mobile`
     margin: 0.5rem 0;
     padding: 0.4rem 0;
   `}

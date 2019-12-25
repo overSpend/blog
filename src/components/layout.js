@@ -46,10 +46,10 @@ const Footer = styled.footer`
 
 const PostContainer = styled.div`
     margin: 3rem auto;
-    max-width: 728px;
+    max-width: 42rem;
     padding: 0 0.5rem;
 
-    ${media.tablet`
+    ${media.mobile`
     width: 80%;
   `};
 `;

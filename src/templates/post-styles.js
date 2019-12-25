@@ -3,16 +3,16 @@ import media from '../utils/media';
 
 export const Container = styled.article`
     margin: 5rem auto;
-    max-width: 728px;
+    max-width: 42rem;
     padding: 0 0.5rem;
 
-    ${media.phone`
+    ${media.mobile`
     margin-top: 4rem;
   `};
 `;
 
 export const Header = styled.header`
-    ${media.tablet`
+    ${media.mobile`
     text-align: center;
   `};
 `;

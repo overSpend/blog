@@ -7,14 +7,15 @@ import media from '../utils/media';
 const Container = styled.div`
     margin-top: 10vh;
 
-    ${media.tablet`
+    ${media.mobile`
     flex-direction: column;
     text-align: center;
+    margin-top: 7vh;
   `};
 `;
 
 const TextContainer = styled.div`
-${media.tablet`
+${media.mobile`
     flex-direction: column;
     text-align: center;
   `}
