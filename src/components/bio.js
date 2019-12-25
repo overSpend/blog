@@ -50,14 +50,14 @@ const Bio = () => (
 );
 
 const bioQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        author
-        authorTagline
-      }
+    query {
+        site {
+            siteMetadata {
+                author
+                authorTagline
+            }
+        }
     }
-  }
 `;
 
 export default Bio;

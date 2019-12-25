@@ -16,7 +16,6 @@ const Title = styled.h1`
     ${media.mobile`
     text-align: center;
     letter-spacing: 0;`};
-
 `;
 
 const Ul = styled.ul`

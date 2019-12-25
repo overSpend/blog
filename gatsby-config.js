@@ -14,15 +14,15 @@ module.exports = {
             }
         },
         {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`
-            }
-        },
-        {
             resolve: `gatsby-plugin-styled-components`,
             options: {}
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+                trackingId: 'UA-155020282-1'
+            }
         },
         {
             resolve: `gatsby-plugin-manifest`,
@@ -36,8 +36,6 @@ module.exports = {
                 icon: `src/images/icon.png`
             }
         },
-        `gatsby-transformer-sharp`, 
-        `gatsby-plugin-sharp`,
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-remark`,

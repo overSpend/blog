@@ -9,8 +9,6 @@ const StyledLink = styled(Link)`
 
 export default StyledLink;
 
-
-
 // <Link to={node.fields.slug}
 //       css={css`
 //          text-decoration: none;
