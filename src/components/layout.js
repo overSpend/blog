@@ -4,7 +4,6 @@ import styled, { createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
-import media from '../utils/media';
 import Header from './header';
 
 const GlobalStyles = createGlobalStyle`
@@ -49,9 +48,6 @@ const PostContainer = styled.div`
     max-width: 40rem;
     padding: 0 0.5rem;
 
-    ${media.mobile`
-    width: 80%;
-  `};
 `;
 
 const ListLink = props => (
