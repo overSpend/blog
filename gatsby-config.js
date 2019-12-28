@@ -3,7 +3,8 @@ module.exports = {
         title: `OVERSPEND`,
         description: `OVERSPEND's Blog`,
         author: `과소비`,
-        authorTagline: `당신의 과소비를 위해`
+        authorTagline: `당신의 과소비를 위해`,
+        siteUrl: `https://overspend.netlify.com`
     },
     plugins: [
         {
@@ -36,6 +37,7 @@ module.exports = {
                 icon: `src/images/icon.png`
             }
         },
+        `gatsby-plugin-sitemap`,
         `gatsby-plugin-offline`,
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-remark`,
