@@ -6,12 +6,12 @@ import media from '../utils/media';
 import StyledLink from '../utils/styled-link';
 
 const Container = styled.div`
-    margin-top: 10vh;
+    margin-top: 8vh;
 
     ${media.mobile`
     flex-direction: column;
     text-align: center;
-    margin-top: 8vh;
+    margin-top: 5.5vh;
   `};
 `;
 
@@ -27,6 +27,7 @@ const TagLine = styled.h4`
     color: #f73b3bdb;
     font-size: 0.9rem;
     font-weight: bolder;
+    text-decoration: underline;
 `;
 
 const TextContainer = styled.div``;
@@ -41,7 +42,7 @@ const Bio = () => (
                     <TextContainer>
                         <Name>{author}</Name>
                         <StyledLink to={'/about'}>
-                            <TagLine>{authorTagline}✔</TagLine>
+                            <TagLine>{authorTagline}</TagLine>
                         </StyledLink>
                     </TextContainer>
                 </Container>
