@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 
 import SEO from '../components/seo';
 import Layout from '../components/layout';
-import { Container, Title, Header } from './post-styles';
+import { Container, Title, Header, Section } from './post-styles';
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -16,22 +16,20 @@ class BlogPostTemplate extends React.Component {
                 <Container>
                     <Header>
                         <Title>{post.frontmatter.title}</Title>
-                        <sub
-                            css={`
-                          color: rgba(0,0,0,0.8);
-                              `}
-                        >
+                        <sub>
                             <span>Posted on {post.frontmatter.date}</span>
                             <span>&nbsp; - &nbsp;</span>
                             <span>{post.fields.readingTime.text}</span>
                         </sub>
                     </Header>
-                    <div
+                    <Section
                         css={`
-                          margin: 5rem 0;
+                            margin: 5rem 0; 
+                            a{color: #0687f0;} 
+                            p{color: rgba(0,0,0,0.9);}
                         `}
                         dangerouslySetInnerHTML={{ __html: post.html }}
-                    />
+                    />;
                 </Container>
             </Layout>
         );

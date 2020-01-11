@@ -10,11 +10,11 @@ import media from '../utils/media';
 
 const Title = styled.h3`
     font-weight: 800;
-    margin-top: 7vh;
+    margin-top: 6vh;
     color: rgba(0, 0, 0, 0.84);
 
     ${media.mobile`
-    margin-top: 5vh;
+    margin-top: 4vh;
     margin: 3rem 0 0;
   `};
 `;

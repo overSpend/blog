@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
 import media from '../utils/media';
+import StyledLink from '../utils/styled-link';
 
 const Container = styled.div`
     margin-top: 10vh;
@@ -10,14 +11,7 @@ const Container = styled.div`
     ${media.mobile`
     flex-direction: column;
     text-align: center;
-    margin-top: 7vh;
-  `};
-`;
-
-const TextContainer = styled.div`
-    ${media.mobile`
-    flex-direction: column;
-    text-align: center;
+    margin-top: 8vh;
   `};
 `;
 
@@ -26,11 +20,16 @@ const Name = styled.h3`
     color: rgb(29, 29, 29, 1);
 `;
 
-const TagLine = styled.sub`
+const TagLine = styled.h4`
     display: inline-block;
+    margin-top: 1.5vh;
+
+    color: #f73b3bdb;
+    font-size: 0.9rem;
     font-weight: bolder;
-    color: rgb(29, 29, 29, 1);
 `;
+
+const TextContainer = styled.div``;
 
 const Bio = () => (
     <StaticQuery
@@ -41,7 +40,9 @@ const Bio = () => (
                 <Container>
                     <TextContainer>
                         <Name>{author}</Name>
-                        <TagLine>{authorTagline}</TagLine>
+                        <StyledLink to={'/about'}>
+                            <TagLine>{authorTagline}✔</TagLine>
+                        </StyledLink>
                     </TextContainer>
                 </Container>
             );

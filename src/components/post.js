@@ -14,25 +14,28 @@ const Container = styled.div`
 
 const Excerpt = styled.p`
     margin-top: 1rem;
-    font-weight: bolder;
     letter-spacing: -1px;
-    color: rgb(29, 29, 29, 0.87);
+    color: #272525d1;
 `;
 
-const Title = styled.h4`
+const PostTitle = styled.h4`
     margin-top: 2.34rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
+`;
+
+const TimeSincePosted = styled.sub`
+    color: rgb(29, 29, 29, 1);
 `;
 
 const Post = ({ node }) => (
     <StyledLink to={node.fields.slug}>
         <Container>
-            <Title>{node.frontmatter.title} </Title>
-            <sub>
+            <PostTitle>{node.frontmatter.title} </PostTitle>
+            <TimeSincePosted>
                 <span>on {node.frontmatter.date}</span>
                 <span>&nbsp; - &nbsp;</span>
                 <span>{node.fields.readingTime.text}</span>
-            </sub>
+            </TimeSincePosted>
             <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </Container>
     </StyledLink>

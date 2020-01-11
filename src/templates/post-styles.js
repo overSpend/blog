@@ -20,5 +20,7 @@ export const Header = styled.header`
 export const Title = styled.h1`
     margin-bottom: 0.7rem;
     font-size: 2rem;
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.9);
 `;
+
+export const Section = styled.section``;
