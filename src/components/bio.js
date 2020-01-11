@@ -6,7 +6,7 @@ import media from '../utils/media';
 import StyledLink from '../utils/styled-link';
 
 const Container = styled.div`
-    margin-top: 8vh;
+    margin-top: 4.5rem;
 
     ${media.mobile`
     flex-direction: column;
@@ -22,9 +22,9 @@ const Name = styled.h3`
 
 const TagLine = styled.h4`
     display: inline-block;
-    margin-top: 1.5vh;
+    margin-top: 0.8rem;
 
-    color: #f73b3bdb;
+    color: #48a3f3;
     font-size: 0.9rem;
     font-weight: bolder;
     text-decoration: underline;

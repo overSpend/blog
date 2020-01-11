@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import media from '../utils/media';
 
 export const Container = styled.article`
-    margin: 5rem auto;
+    margin: 4rem auto;
     max-width: 42rem;
     padding: 0 0.5rem;
 
     ${media.mobile`
-    margin-top: 4rem;
+    margin-top: 3rem;
   `};
 `;
 
@@ -23,4 +23,13 @@ export const Title = styled.h1`
     color: rgba(0, 0, 0, 0.9);
 `;
 
-export const Section = styled.section``;
+export const Section = styled.section`
+    margin: 4rem 0;
+    a {
+        text-decoration: none;
+        color: #0687f0;
+    }
+    p {
+        color: rgba(0, 0, 0, 0.9);
+    }
+`;

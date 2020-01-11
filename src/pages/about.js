@@ -13,7 +13,7 @@ const Box = styled.div`margin-bottom: 1.3rem;`;
 const TextBox = styled.p`margin-bottom: 1.1rem;`;
 
 const Container = styled.div`
-    margin: 5rem auto;
+    margin: 4rem auto;
     max-width: 728px;
     padding: 0 0.5rem;
 `;

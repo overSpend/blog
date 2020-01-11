@@ -24,9 +24,7 @@ const GlobalStyles = createGlobalStyle`
   h4 {
     font-size: 1.4rem;
   }
-sub {
-    font-size: 0.9rem;
-}
+
 `;
 
 const Content = styled.main``;

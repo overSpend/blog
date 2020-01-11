@@ -23,13 +23,8 @@ class BlogPostTemplate extends React.Component {
                         </sub>
                     </Header>
                     <Section
-                        css={`
-                            margin: 5rem 0; 
-                            a{color: #0687f0;} 
-                            p{color: rgba(0,0,0,0.9);}
-                        `}
                         dangerouslySetInnerHTML={{ __html: post.html }}
-                    />;
+                    />
                 </Container>
             </Layout>
         );
