@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import { css } from '@emotion/core';
@@ -38,25 +37,12 @@ const SubTitle = styled.h2`
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 `;
 
-const ListLink = props => (
-    <li
-        css={css`
-            display: inline-block;
-            margin-left: 1rem;
-        `}
-    >
-        <Link
-            css={css`
-                font-family: 'Oswald', sans-serif;
-                color: rgb(29, 29, 29, 1);
-                font-size: 1.2rem;
-            `}
-            to={props.to}
-        >
-            {props.children}
-        </Link>
-    </li>
-);
+const ALink = styled.a`
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    color: #48a3f3;
+`;
 
 export default () => (
     <Layout>
@@ -70,24 +56,24 @@ export default () => (
                     <Title>과소비( 홍종석 )</Title>
                     <Box>
                         <TextBox>
-                            기계와 개발을 좋아하며 Full-Stack 개발자가 되기위해 공부하고 있습니다. 또한 현재(19.12.16) 육군으로
-                            복무중입니다(~21.04.05). 기계와 개발에 관련된 이야기를 좋아하며, 제가 가진 정보가 타인에게 도움이 되는것을 좋아합니다.
+                            상상을 현실로 만들 수 있는 개발자를 꿈꾸는 프론트엔드 엔지니어입니다. 기계와 개발에 관련된 이야기를 좋아하며, 제가 가진 정보와
+                            서비스가 타인에게 도움이 되는것을 보며 행복을 느낍니다.
                         </TextBox>
                     </Box>
                 </Box>
                 <Box className="skill">
                     <SubTitle>Skills</SubTitle>
                     <TextBox>
-                        <strong>Programming:&nbsp;</strong>Java, Kotlin, Python
+                        <strong>Languages:&nbsp;</strong>Javascript, Python
                     </TextBox>
                     <TextBox>
-                        <strong>Frontend:&nbsp;</strong>Html, Css, Sass, React
+                        <strong>Frontend:&nbsp;</strong>React, React-Native
                     </TextBox>
                     <TextBox>
-                        <strong>Backend:&nbsp;</strong>Node.js, Django, DB(MySQL)
+                        <strong>Backend:&nbsp;</strong>Node.js(with Express.js), Django, MySQL, Socket.io
                     </TextBox>
                     <TextBox>
-                        <strong>Etc:&nbsp;</strong>Git, Slack, Github, Notion
+                        <strong>Etc:&nbsp;</strong>Git, Github, Slack, Notion
                     </TextBox>
                 </Box>
                 <Box className="project">
@@ -96,12 +82,12 @@ export default () => (
                         <strong css={css`font-size: 1.1rem;`}>개인 블로그&nbsp;</strong>
                         <TextBox css={css`margin-bottom: 0.3rem;`}>
                             <strong>Page Link:&nbsp;</strong>
-                            <ListLink to="https://overspend.netlify.com">
+                            <ALink href="https://overspend.netlify.com">
                                 overspend.netlify.com
-                            </ListLink>
+                            </ALink>
                         </TextBox>
-                        개인 블로그를 운영해보고 싶어 제작했습니다. 공부를 하며 제가 배운 내용이나 경험하게된 내용을 공유하는 블로그입니다. 블로그는
-                        Gatsby.js와 Netlify를 이용해 제작했습니다.
+                        개인 블로그를 운영해보고자 제작했습니다. 공부를 하며 배운 내용이나 경험한 내용을 공유합니다. 블로그는 Gatsby.js와
+                        Netlify를 이용해 제작했습니다.
                     </TextBox>
                 </Box>
             </Page>
